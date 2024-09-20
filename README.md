@@ -1,9 +1,9 @@
 # dex2oat-optimizer
 ![CA67325F9DCB2765BD7B0CEBABA59796](https://github.com/user-attachments/assets/404f8de5-c836-4cc7-adbf-aeb0c79944d5)
 
-ART 优化模块，加速应用启动，提升系统性能
+ART 优化，加速应用启动，提升系统性能
 
-An ART optimization module to accelerate app launches and improve system performance
+ART optimization, accelerating application startup and improving system performance
 
 根据获取到的Android版本号，执行不同的优化命令
 
