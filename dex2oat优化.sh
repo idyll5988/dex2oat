@@ -32,16 +32,16 @@ done
 echo "[*] 优化主提升应用程序"
 ANDROID_VERSION=$(get_android_version)
 if [ "$(printf '%s\n' "$ANDROID_VERSION" "13" | sort -V | head -n1)" = "$ANDROID_VERSION" ]; then
-    echo "[*] 安卓版本为13或以下运行命令"
+    echo "[*] 安卓版本为13或以下运行"
 	pm compile -m speed-profile -a
     pm compile -m speed-profile --secondary-dex -a
     pm compile --compile-layouts -a
 elif [ "$(printf '%s\n' "$ANDROID_VERSION" "14" | sort -V | head -n1)" = "14" ]; then
-	echo "[*] 安卓版本为14或以上运行命令"
+	echo "[*] 安卓版本为14或以上运行"
     pm compile -m speed-profile --full -a
     pm art dexopt-packages -r bg-dexopt
     pm art cleanup
 else
-	echo "[*] 安卓版本低等于13，无法运行优化"
+	echo "[*] 安卓版本无法运行优化"
 fi
 	
