@@ -1,5 +1,5 @@
 # dex2oat-optimizer
-![CA67325F9DCB2765BD7B0CEBABA59796](https://github.com/user-attachments/assets/404f8de5-c836-4cc7-adbf-aeb0c79944d5)
+![DE8135AACFAA2E9DF86E36C9EE57A19E](https://github.com/user-attachments/assets/0948d962-0763-4909-99ff-afa3275fa9f6)
 
 ART 优化，加速应用启动，提升系统性能
 
