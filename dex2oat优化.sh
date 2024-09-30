@@ -1,5 +1,10 @@
 #!/system/bin/sh
 thread_num=200
+(echo "\n  按下音量按钮\n   音量 + : 执行编译\n   音量 - : 清除所有编译\n";
+while true;
+do input="$(timeout 0.1 getevent -l|grep -Eo 'VOLUMEUP|VOLUMEDOWN'|head -n1)";
+if [ "$input" = "VOLUMEUP" ];then 
+echo "   已选定 : 执行编译\n";
 get_android_version() {
     getprop ro.build.version.release
 }
@@ -57,4 +62,11 @@ elif [ "$(printf '%s\n' "$ANDROID_VERSION" "14" | sort -V | head -n1)" = "14" ];
 else
 	echo "[*] 安卓版本无法运行优化"
 fi
+break;
+elif [ "$input" = "VOLUMEDOWN" ];then 
+echo "   已选定 : 清除所有编译\n";
+cmd package compile --reset -a
+break;
+fi;
+done;)2>/dev/null
 	
